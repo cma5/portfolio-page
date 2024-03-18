@@ -254,9 +254,33 @@ button {
     .search-field {
         display: flex;
         color: var(--text-color-light);
+        position: relative;
+        background-color: var(--inactive-line-color);
+        margin-top: .25rem;
+        margin-bottom: .25rem;
+        
     }
 
+    .search-icon {
+        position: absolute;
+        margin-top: .25rem;
+        margin-left: .125rem;
+    }
+
+    .search {
+        padding-left: 1.5rem;
+        font-size: .875rem;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        line-height: 1.25rem;
+        border-width: 0px;
+        border-color: var(--border-color);
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+        border-radius: .35rem;
+    }
 }
+
+
 
 @media screen and (max-width: 1024px) {
     .horizontal-menu
