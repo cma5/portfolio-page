@@ -1,0 +1,15 @@
+{
+  "name": "elouvre",
+  "version": "1.0.0",
+  "description": "example project for training purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx serve ./src && tsc ./src/scripts.ts --watch"
+  },
+  "author": "Markus Schnugg",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.2"
+  }
+}
