@@ -5,6 +5,17 @@ export enum Delays {
 }
 
 
-function toggleVisibility(element: HTMLElement) {
-    element.style.display = element.style.display === 'none' ? 'block' : 'none';
+function toggleVisibility(elementID: string) {
+    const element = document.getElementById(elementID)
+
+    if (element === null) {
+        console.error(`Element with ID ${elementID} not found`)
+        return
+    }
+    if (element.style.display === "none") {
+        element.style.display = "flex"
+    }
+    else {
+        element.style.display = "none"
+    }
 }

@@ -7,6 +7,16 @@ var Delays;
     Delays[Delays["MEDIUM"] = 500] = "MEDIUM";
     Delays[Delays["LONG"] = 1000] = "LONG";
 })(Delays || (exports.Delays = Delays = {}));
-function toggleVisibility(element) {
-    element.style.display = element.style.display === 'none' ? 'block' : 'none';
+function toggleVisibility(elementID) {
+    var element = document.getElementById(elementID);
+    if (element === null) {
+        console.error("Element with ID ".concat(elementID, " not found"));
+        return;
+    }
+    if (element.style.display === "none") {
+        element.style.display = "flex";
+    }
+    else {
+        element.style.display = "none";
+    }
 }
