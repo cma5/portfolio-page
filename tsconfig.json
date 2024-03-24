@@ -1,5 +1,7 @@
     {
         "compilerOptions": {
+            "lib": ["es2022", "dom"],
+            "target": "ES2022",
             "module": "system",
             "noImplicitAny": true,
             "removeComments": true,
@@ -8,7 +10,7 @@
             "sourceMap": true
         },
         "include": [
-            "src/**/*"
+            "src/static/**/*"
         ],
         "exclude": [
             "node_modules",
