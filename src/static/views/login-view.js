@@ -1,4 +1,19 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -36,20 +51,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var default_1 = /** @class */ (function () {
+var abstract_view_1 = require("./abstract-view");
+var default_1 = /** @class */ (function (_super) {
+    __extends(default_1, _super);
     function default_1(params) {
-        params = params;
+        var _this = _super.call(this, params) || this;
+        _this.setTitle("Dashboard");
+        return _this;
     }
-    default_1.prototype.setTitle = function (title) {
-        document.title = title;
-    };
     default_1.prototype.getHtml = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, ""];
+                return [2 /*return*/, "\n            <h1>Welcome back, Dom</h1>\n            <p>Hi there, this is your Dashboard.</p>\n            <p>\n                <a href=\"/posts\" data-link>View recent posts</a>.\n            </p>\n        "];
             });
         });
     };
     return default_1;
-}());
+}(abstract_view_1.default));
 exports.default = default_1;

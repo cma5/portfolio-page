@@ -73,11 +73,10 @@ var router = function () { return __awaiter(void 0, void 0, void 0, function () 
     var routes, potentialMatches, match;
     return __generator(this, function (_a) {
         routes = [
-            { path: "/" },
-            { path: "/artist" },
-            { path: "/overview" },
-            { path: "/login" },
-            { path: "/account" }
+            { path: "/" /*, view: Overview*/ },
+            { path: "/artist" /*, view: Artist*/ },
+            { path: "/login" /*, view: Login*/ },
+            { path: "/account" /*, view: Account*/ }
         ];
         potentialMatches = routes.map(function (route) {
             return {

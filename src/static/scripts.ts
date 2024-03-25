@@ -1,4 +1,7 @@
-import Dashboard from "./views/abstract-view.js";
+import Artist from "./views/artist-view.js";
+import Overview from "./views/overview-view.js";
+import Login from "./views/login-view.js";
+import Account from "./views/account-view.js";
 
 
 function toggleVisibility(elementID: string) {
@@ -43,11 +46,10 @@ const pathToRegex = (path: string) => new RegExp("^" + path.replace(/\//g, "\\/"
 
 const router = async () => {
     const routes = [
-        { path: "/" },
-        { path: "/artist" },
-        { path: "/overview" },
-        { path: "/login" },
-        { path: "/account"}
+        { path: "/"/*, view: Overview*/ },
+        { path: "/artist" /*, view: Artist*/},
+        { path: "/login" /*, view: Login*/},
+    { path: "/account" /*, view: Account*/}
     ];
     const potentialMatches = routes.map(route => {
         return {
