@@ -1,3 +1,6 @@
+import Dashboard from "./views/abstract-view.js";
+
+
 function toggleVisibility(elementID: string) {
     const element: any = document.getElementsByClassName(elementID)[0]
 
