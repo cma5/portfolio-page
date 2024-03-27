@@ -1,9 +1,3 @@
-import Artist from "./views/artist-view.js";
-import Overview from "./views/overview-view.js";
-import Login from "./views/login-view.js";
-import Account from "./views/account-view.js";
-
-
 function toggleVisibility(elementID: string) {
     const element: any = document.getElementsByClassName(elementID)[0]
 
@@ -42,51 +36,3 @@ window.addEventListener('resize', function () {
     }
 })
 
-const pathToRegex = (path: string) => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
-
-const router = async () => {
-    const routes = [
-        { path: "/"/*, view: Overview*/ },
-        { path: "/artist" /*, view: Artist*/},
-        { path: "/login" /*, view: Login*/},
-    { path: "/account" /*, view: Account*/}
-    ];
-    const potentialMatches = routes.map(route => {
-        return {
-            route: route,
-            result: location.pathname.match(pathToRegex(route.path))
-        }
-    })
-
-    let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null)
-
-    if (!match) {
-        match = {
-            route: routes[0],
-            result: [location.pathname]
-        }
-    }
-    console.log(match);
-}
-
-const navigateTo = (url: string) => {
-    history.pushState(null, "", url);
-    router();
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    /* Document has loaded -  run the router! */
-    router();
-});
-
-
-window.addEventListener("popstate", router)
-
-const getParams = (match: any) => {
-    const values = match.result.slice(1);
-    const keys = Array.from(match.route.path.matchAll(/:(\w+)/g)).map((result: RegExpMatchArray) => result[1]);
-
-    return Object.fromEntries(keys.map((key, i) => {
-        return [key, values[i]];
-    }));
-};
