@@ -1,19 +1,16 @@
 {
-  "name": "elouvre",
+  "name": "spa",
   "version": "1.0.0",
-  "description": "example project for training purposes",
+  "description": "Taken from my YouTube Tutorial: https://www.youtube.com/watch?v=6BozpmSjk-Y",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently 'tsc ./src/static/scripts.ts --watch' 'nodemon -q src/static/scripts.js' 'node server.js'"
+    "start": "node server.js"
   },
-  "author": "Markus Schnugg",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "typescript": "^5.4.2"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.19.1"
+    "express": "^4.19.2"
   }
 }
