@@ -1,6 +1,7 @@
 import Dashboard from "./views/Dashboard.js";
 import Artists from "./views/Artists.js";
 import ArtistsView from "./views/ArtistsView.js";
+import Login from "./views/Login.js";
 import Settings from "./views/Settings.js";
 
 
@@ -25,7 +26,7 @@ const router = async () => {
         { path: "/", view: Dashboard },
         { path: "/artists", view: Artists },
         { path: "/artists/:id", view: ArtistsView },
-        { path: "/signin", view: Settings }
+        { path: "/signin", view: Login }
     ];
 
     // Test each route for potential match
