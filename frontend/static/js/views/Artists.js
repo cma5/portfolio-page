@@ -4,8 +4,11 @@ export default class extends AbstractView {
     constructor(params) {
         super(params);
         this.setTitle("Posts");
+        this.getHtml("static/html/views/Artists.html")
+        this.getCss("static/css/Artists.css")
+        this.getJs("static/js/views/actions/ArtistsAction.js")
     }
-
+/*
     async getHtml() {
         const html = await fetch("static/html/views/Artists.html").then((response) => response.text());
         return html
@@ -43,4 +46,5 @@ export default class extends AbstractView {
             document.getElementsByTagName('body')[0].appendChild(script);
         }
     }
+    */
 }
