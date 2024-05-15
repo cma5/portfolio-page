@@ -1,0 +1,43 @@
+.main-content > :not(:last-child) {
+  margin-bottom: var(--spacing-big);
+}
+
+.link-collection > :not(:last-child) {
+  margin-bottom: var(--spacing-big);
+}
+
+.hero-image {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.hero-description {
+    margin-top: -.57rem;
+}
+
+
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-tiny);
+
+
+  svg {
+    height: auto;
+    width: 1rem;
+    path{
+        fill: var(--text-color);
+    }
+  }
+
+  a {
+    margin-left: .35rem;
+  }
+}
+
+.link-container {
+  p {
+    margin-bottom: var(--spacing-small);
+  }
+}

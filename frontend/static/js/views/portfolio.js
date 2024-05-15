@@ -1,12 +1,12 @@
-import AbstractView from "./AbstractView.js";
+import abstractView from "./abstractView.js";
 
-export default class extends AbstractView {
+export default class extends abstractView {
     constructor(params) {
         super(params);
         this.setTitle("Posts");
-        this.getHtml("static/html/views/Artists.html")
-        this.getCss("static/css/Artists.css")
-        this.getJs("static/js/views/actions/ArtistsAction.js")
+        this.getHtml("static/html/views/portfolio.html")
+        this.getCss("static/css/portfolio.css")
+        this.getJs("static/js/views/actions/portfolioAction.js")
     }
 /*
     async getHtml() {

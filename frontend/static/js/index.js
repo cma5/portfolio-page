@@ -1,8 +1,6 @@
-import Dashboard from "./views/Dashboard.js";
-import Artists from "./views/Artists.js";
-import ArtistsView from "./views/ArtistsView.js";
-import Login from "./views/Login.js";
-import Settings from "./views/Settings.js";
+import portfolio from "./views/portfolio.js";
+import contact from "./views/contact.js";
+import home from "./views/home.js";
 
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
@@ -21,12 +19,26 @@ const navigateTo = url => {
     router();
 };
 
+async function deleteCss() {
+    let link = document.createElement('link');
+    link.href = '/static/css/index.css';
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+
+    let hasCss = false;
+    let links = document.getElementsByTagName('link');
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].href != link.href) {
+            document.getElementsByTagName('head')[0].removeChild(links[i]);
+        }
+    }
+}
+
 const router = async () => {
     const routes = [
-        { path: "/", view: Dashboard },
-        { path: "/artists", view: Artists },
-        { path: "/artists/:id", view: ArtistsView },
-        { path: "/signin", view: Login }
+        { path: "/", view: home },
+        { path: "/portfolio", view: portfolio },
+        { path: "/contact", view: contact }
     ];
 
     // Test each route for potential match
@@ -45,13 +57,9 @@ const router = async () => {
             result: [location.pathname]
         };
     }
+    deleteCss();
 
-    const view = new match.route.view(getParams(match));
-    /*
-    document.querySelector("#app").innerHTML = await view.getHtml();
-    await view.getCss();
-    await view.getJs();
-    */
+    new match.route.view(getParams(match));
 };
 
 window.addEventListener("popstate", router);

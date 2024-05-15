@@ -1,0 +1,29 @@
+h1 {
+    margin-bottom: var(--spacing-medium);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-tiny);
+
+
+  svg {
+    height: auto;
+    width: 1rem;
+    path{
+        fill: var(--text-color);
+    }
+  }
+
+  a {
+    margin-left: .35rem;
+  }
+}
+
+.link-container {
+  p {
+    margin-bottom: var(--spacing-small);
+  }
+}
+

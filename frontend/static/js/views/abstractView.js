@@ -29,19 +29,4 @@ export default class {
             document.getElementsByTagName('head')[0].appendChild(link);
         }
     }
-
-    async getJs(jslink) {
-        let script = document.createElement('script');
-        script.src = jslink;
-        let scripts = document.getElementsByTagName('script');
-        let hasJs = false;
-        for (var i = 0; i < scripts.length; i++) {
-            if (scripts[i].src == script.src) {
-                hasJs = true;
-            }
-        }
-        if (!hasJs) {
-            document.getElementsByTagName('body')[0].appendChild(script);
-        }
-    }
 }

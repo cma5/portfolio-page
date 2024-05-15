@@ -1,85 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Page App</title>
+    <title>Markus Schnugg</title>
     <link rel="stylesheet" href="/static/css/index.css">
 </head>
+
 <body>
-    <nav class="nav">     
-        <div class="horizontal-menu">
-            <div class="menu">
-                <div class="menu-button">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_942_1168)" />
-                        <defs>
-                            <linearGradient id="paint0_linear_942_1168" x1="32.5333" y1="2.63333" x2="-1.6" y2="29.8333"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00BDBD" />
-                                <stop offset="1" stop-color="#004286" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="navigation-buttons">
-                    <button class="navigation-button" data-url="/">
-                        Home
-                    </button>
-                    <button class="navigation-button" data-url="/artists">
-                        Overview
-                    </button>
-                </div>
-            </div>
-            <div class="menu">
-                <div class="menu-button">
-                    <button class="active-menu-button" onclick="toggleVisibility('floating-menu')">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="16" cy="16" r="16" fill="url(#paint0_linear_942_1168)" />
-                            <defs>
-                                <linearGradient id="paint0_linear_942_1168" x1="32.5333" y1="2.63333" x2="-1.6"
-                                    y2="29.8333" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#00BDBD" />
-                                    <stop offset="1" stop-color="#004286" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </button>
-                    <div class="absolute-position-marker">
-                        <div class="floating-menu">
-                            <button class="floating-menu-button" data-url="/signin">
-                                Sign in
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="burger-menu-button">
-                    <button class="active-menu-button" onclick="toggleVisibility('vertical-menu')">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 2L16 16" stroke="#6B7280" stroke-width="2" stroke-linecap="round" />
-                            <path d="M2 16L16 2" stroke="#6B7280" stroke-width="2" stroke-linecap="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="vertical-menu">
-            <div class="menu">
-                <div class="navigation-buttons">
-                    <button class="navigation-button" data-url="/">
-                        Home
-                    </button>
-                    <button class="navigation-button" data-url="/artists">
-                        Overview
-                    </button>
-                </div>
-            </div>
-            <div class="menu">
-                <div class="navigation-buttons">
-                    <button class="navigation-button" data-url="/signin">
-                        Sign in
-                    </button>
-                </div>
+    <nav class="nav">
+        <div class="menu">
+            <div class="navigation-buttons">
+                <button class="navigation-button" data-url="/">
+                    home
+                </button>
+                <button class="navigation-button" data-url="/portfolio">
+                    portfolio
+                </button>
+                <button class="navigation-button" data-url="/contact">
+                    contact
+                </button>
             </div>
         </div>
     </nav>
@@ -87,4 +28,5 @@
     <script type="module" src="/static/js/index.js"></script>
     <script src="/static/js/layout.js"></script>
 </body>
+
 </html>
