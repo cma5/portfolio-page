@@ -28,3 +28,7 @@
         margin-bottom: var(--spacing-tiny);	
     }
 }
+
+.whitespace {
+    height: var(--spacing-big);
+}
